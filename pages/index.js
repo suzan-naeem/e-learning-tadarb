@@ -18,16 +18,16 @@ export default function Home({ data }) {
         <title>{title}</title>
       </Head>
       <Navbar />
-      <div class="text-right full-page">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-md-12 col-lg-7">
-              <div class="links-end bottom">
-                <a href="#">الاكثر مبيعا<i class="fas fa-angle-left fa-fw"></i></a>
-                <a href="#">حياة <i class="fas fa-angle-left fa-fw"></i></a>
+      <div className="text-right full-page">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-md-12 col-lg-7">
+              <div className="links-end bottom">
+                <a href="#">الاكثر مبيعا<i className="fas fa-angle-left fa-fw"></i></a>
+                <a href="#">حياة <i className="fas fa-angle-left fa-fw"></i></a>
                 <a href="#">{title}</a>
               </div>
-              <div class="video bottom">
+              <div className="video bottom">
                 <Vimeo
                   video={matchedURL[0]}
                   width={640}
@@ -36,10 +36,10 @@ export default function Home({ data }) {
               </div>
 
 
-              <div class="box-typing bottom video">
+              <div className="box-typing bottom video">
 
-                <ul class="list-unstyled">
-                  <h2 class="title">تفاصيل الدورة</h2>
+                <ul className="list-unstyled">
+                  <h2 className="title">تفاصيل الدورة</h2>
                   <li key={id}>
                     <div dangerouslySetInnerHTML={{
                       __html: description
@@ -54,12 +54,12 @@ export default function Home({ data }) {
 
 
 
-              <div class="box-card-bio">
-                <div class="row">
-                  <div class="content-box">
-                    <div class="info">
-                      <img src={trainer.image} />
-                      <div class="cont-info">
+              <div className="box-card-bio">
+                <div className="row">
+                  <div className="content-box">
+                    <div className="info">
+                      <img src={trainer.image} alt="trainer"/>
+                      <div className="cont-info">
                         <p>{trainer.title}</p>
                         <span>{trainer.name_ar}</span>
                       </div>
@@ -78,49 +78,49 @@ export default function Home({ data }) {
 
 
 
-              <div class="box-card">
+              <div className="box-card">
                 <h5>مشتركين هذه الدوره إمتلكوا الدورات التاليه أيضا</h5>
-                <div class="row">
-                  {/* <div class="col-md-6">
-                <div class="content-box">
-                  <div class="img">
+                <div className="row">
+                  {/* <div className="col-md-6">
+                <div className="content-box">
+                  <div className="img">
                      <img src={image}/> 
                   </div>
-                  <div class="info">
+                  <div className="info">
                     <img src={trainer.image} />
-                    <div class="cont-info">
+                    <div className="cont-info">
                        <p>{title}</p> 
                       <span>{trainer.name_ar}</span>
                     </div>
                   </div>
-                  <div class="price">
+                  <div className="price">
                     <span>{price} {currency_code}</span> 
-                    <a href="#"><i class="fas fa-shopping-cart fa-fw"></i> اضف للسله</a>
+                    <a href="#"><i className="fas fa-shopping-cart fa-fw"></i> اضف للسله</a>
                   </div>
                 </div>
               </div> */}
 
 
-                  {/* <div class="col-md-6">
-                <div class="content-box">
-                  <div class="img">
+                  {/* <div className="col-md-6">
+                <div className="content-box">
+                  <div className="img">
                       <img src={image}/>  
                   </div>
-                  <div class="info">
+                  <div className="info">
                     <img src={trainer.image} />
-                    <div class="cont-info">
+                    <div className="cont-info">
                        <p>{title}</p> 
                       <span>{trainer.name_ar}</span>
                     </div>
                   </div>
-                  <div class="price">
+                  <div className="price">
                   <span>{price} {currency_code}</span> 
-                    <a href="#"><i class="fas fa-shopping-cart fa-fw"></i> اضف للسله</a>
+                    <a href="#"><i className="fas fa-shopping-cart fa-fw"></i> اضف للسله</a>
                   </div>
                 </div>
               </div>  */}
 
-                  <RelatedCourse items={data.data} />
+                  <RelatedCourse key={data.data.id} items={data.data} />
 
 
 
@@ -131,53 +131,53 @@ export default function Home({ data }) {
               </div>
 
             </div>
-            <div class="col-xs-12 col-md-12 col-lg-5">
-              <div class="show-details bottom">
+            <div className="col-xs-12 col-md-12 col-lg-5">
+              <div className="show-details bottom">
                 <h5>{title}</h5>
                 <p><span>{price}</span> جنيه مصرى</p>
                 <span><del>{discounted_price} جنيه مصرى</del> (خصم 20%)</span>
-                <div class="butns">
+                <div className="butns">
                   <a href="#"
-                  ><i class="fas fa-shopping-cart fa-fw"></i> اضف للسله</a
+                  ><i className="fas fa-shopping-cart fa-fw"></i> اضف للسله</a
                   >
-                  <a href="#"><i class="far fa-heart fa-fw"></i></a>
-                  <a href="#"><i class="fas fa-share fa-fw"></i></a>
+                  <a href="#"><i className="far fa-heart fa-fw"></i></a>
+                  <a href="#"><i className="fas fa-share fa-fw"></i></a>
                 </div>
-                <div class="msg">
-                  <div class="icon">
-                    <i class="fas fa-check-square fa-fw"></i>
+                <div className="msg">
+                  <div className="icon">
+                    <i className="fas fa-check-square fa-fw"></i>
                   </div>
-                  <div class="content-text">
+                  <div className="content-text">
                     <h5>30 يوم ضمان ذهبى استراد كامل المبلغ</h5>
                     <p>إذا لم تكن راضي عن محتوى الدوره</p>
                   </div>
                 </div>
-                <ul class="list-unstyled skills">
-                  <li><i class="fas fa-clock fa-fw"></i> 8 ساعات تدريبيه</li>
+                <ul className="list-unstyled skills">
+                  <li><i className="fas fa-clock fa-fw"></i> 8 ساعات تدريبيه</li>
                   <li>
-                    <i class="fas fa-file fa-fw"></i> مرفقات حصريه جاهزه للتحميل
+                    <i className="fas fa-file fa-fw"></i> مرفقات حصريه جاهزه للتحميل
                   </li>
                   <li>
-                    <i class="fas fa-infinity fa-fw"></i> إمتلاك الدوره مدى الحياه
+                    <i className="fas fa-infinity fa-fw"></i> إمتلاك الدوره مدى الحياه
                   </li>
                   <li>
-                    <i class="fas fa-laptop fa-fw"></i> المشاهده من اي موبايل او
+                    <i className="fas fa-laptop fa-fw"></i> المشاهده من اي موبايل او
                     لابتوب
                   </li>
                   <li>
-                    <i class="fas fa-address-card fa-fw"></i> شهادة إتمام اون لاين
+                    <i className="fas fa-address-card fa-fw"></i> شهادة إتمام اون لاين
                     معتمده
                   </li>
                 </ul>
-                <div class="msg-wrong">
-                  <div class="text-center content-text">
+                <div className="msg-wrong">
+                  <div className="text-center content-text">
                     <h5>
                       إنضم إلى <span>2 مليون متعلم</span> على منصة تدرب وتعلم
                       مهارة جديده يوميا
                     </h5>
                   </div>
                 </div>
-                <div class="text-center resultes">
+                <div className="text-center resultes">
                   هل لديك كوبون خصم؟ <span>ادخل الكوبون</span>
                 </div>
               </div>

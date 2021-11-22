@@ -29,14 +29,19 @@ export default function Home({ data }) {
               </div>
               <div className="video bottom">
                 <Vimeo
+                  className="res-video" 
                   video={matchedURL[0]}
                   width={640}
                   height={480}
+                  frameborder={0}
+                  allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"
                 />
-              </div>
+              </div>  
+
+              
 
 
-              <div className="box-typing bottom video">
+              <div className="box-typing bottom">
 
                 <ul className="list-unstyled">
                   <h2 className="title">تفاصيل الدورة</h2>
